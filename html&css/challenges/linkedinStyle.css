@@ -1,0 +1,61 @@
+.body{
+    font-family: Arial;
+}
+.email {
+    font-size: 14px;
+    color: rgb(62, 61, 61);
+    margin-bottom: 5px;
+}
+
+.input-email {
+    width: 350px;
+    padding: 8px;
+    border: 0.5px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    margin-bottom: 0px;
+}
+
+.condition{
+    margin-top:2px;
+    color:rgb(114, 114, 114);
+    font-size: 12px;
+}
+
+.button-join {
+    background-color: rgb(0,119,181);
+    border:none;
+    padding: 10px 30px 10px 30px;
+    color: aliceblue;
+    font-size: 16px;
+    border-radius: 40px;
+    width: 370px;
+    text-align:center;
+    margin-bottom:60px;
+
+}
+.post{
+    display: flex;
+    align-items: center;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+img{
+    margin-left:10px;
+    width:40px;
+    border-radius: 20px;
+    margin-right:20px;
+}
+.post-content{
+    color: rgb(114, 114, 114);
+    flex: 1;
+}
+.button-tweet{
+    border:none;
+    border-radius: 5px;
+    color:white;
+    background-color: rgb(6, 165, 239);
+    padding:5px 10px 5px 10px;
+    margin-right: 10px;
+}
+
+

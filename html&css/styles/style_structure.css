@@ -1,0 +1,14 @@
+body{
+    font-family: Montserrat;
+    text-align: center;
+}
+h3{
+    font-size: 50px;
+    margin-bottom: 0;
+}
+span{
+    text-decoration: underline;
+}
+a{
+    color:black;
+}

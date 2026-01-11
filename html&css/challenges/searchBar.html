@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Notifications</title>
+    <style>
+        .card {
+            display: inline-block;
+            padding: 8px 15px 8px 15px;
+            margin: 20px;
+            border-radius: 10px;
+            border: 1px solid #e5e7eb;
+            box-shadow:
+                0 4px 6px rgba(0, 0, 0, 0.05),
+                0 10px 15px rgba(0, 0, 0, 0.08);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .home,
+        .notifications,
+        .messages {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            align-items: center;
+
+        }
+
+        .type {
+            font-family: arial;
+            margin-right: 100px;
+        }
+        .number{
+            background-color: rgb(7, 7, 78);
+            color:white;
+            padding:5px 15px 5px 15px;
+            border-radius: 30px;;
+            font-weight: 600;
+        }
+        .header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: rgb(7, 7, 78);
+            padding:10px;
+            align-items: center;
+        }
+        .left{
+            color:white;
+            font-size: 18px;
+            margin-right: 80px;
+        }
+        input{
+            box-sizing: border-box;
+            width: 100%;  
+            border:none;
+            border-radius:18px;
+            padding:8px;  
+        }
+        .middle{
+            flex:1;
+        }
+        button{
+            padding: 5px;
+            background-color: rgb(7, 7, 78);
+            border:1px solid white;
+            font-size: 16px;
+            padding: 10px 15px 10px 15px;
+            color:white;
+        }
+        .right{
+            margin-left: 80px;
+        }
+        .mutuals{
+            display:flex;
+            flex-direction: column;
+            padding:20px;
+            row-gap: 20px;
+            width:400px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .profile-card{
+            display: flex;
+            flex-direction: row;
+            height: 100px;
+            align-items: center;
+            width: 400px;
+            
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            object-fit:cover;
+            object-position: top;
+            border-radius: 60px;
+            margin-right:20px;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="left">
+            Home
+        </div>
+        <div class="middle">
+            <input type="text" placeholder="search">
+        </div>
+        <div class="right">
+            <button>Download</button>
+        </div>
+
+    </div>
+    <div class="card">
+        <div class="home">
+            <div class="type">
+                Home
+            </div>
+            <div class="number">
+                14
+            </div>
+        </div>
+        <div class="notifications">
+            <div class="type">
+                Notifications
+            </div>
+            <div class="number">
+                5
+            </div>
+        </div>
+        <div class="messages">
+            <div class="type">
+                Messages
+            </div>
+            <div class="number">
+                9
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mutuals">
+        <div class="profile-card">
+            <div>
+                <img src="images.jpg" alt="">
+            </div>
+            <div style="flex:1;">
+                <p style="font-size: 20px; margin-bottom: 0px; font-weight: 700;">Oliver</p>
+                <p style="font-size: 15px; margin-top:8px;  color:rgb(85, 83, 83);">Popular Cat, Studying in university of manchester</p>
+
+            </div>
+            <div style="margin-left:15px;">
+                <button>Follow</button>
+
+            </div>
+        </div>
+        <div class="profile-card">
+            <div>
+                <img src="photo-1529778873920-4da4926a72c2.jpg" alt="">
+            </div>
+            <div style="flex:1;">
+                <p style="font-size: 20px; margin-bottom: 0px; font-weight: 700;">James</p>
+                <p style="font-size: 15px; margin-top:8px;  color:rgb(85, 83, 83);">Handsome billa</p>
+
+            </div>
+            <div style="margin-left:15px;">
+                <button>Follow</button>
+
+            </div>
+        </div>
+        <div class="profile-card">
+            <div>
+                <img src="kitty-cat-kitten-pet-45201.jpeg" alt="">
+            </div>
+            <div style="flex:1;">
+                <p style="font-size: 20px; margin-bottom: 0px; font-weight: 700;">Santara</p>
+                <p style="font-size: 15px; margin-top:8px;  color:rgb(85, 83, 83);">A Sweet adopted little kitty katty</p>
+
+            </div>
+            <div style="margin-left:15px;">
+                <button>Follow</button>
+
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>

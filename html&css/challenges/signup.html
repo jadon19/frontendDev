@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Signup</title>
+    <style>
+        .body{
+            font-family: arial;
+        }
+        .first,.second,.email{
+            border: 0.4px solid grey;
+            border-radius: 5px;
+            padding: 8px 15px 8px 15px;
+        }
+        .first,.second{
+            margin-bottom:5px;
+            width: 100px;
+            
+            margin-bottom: 10px;
+
+        }
+        .email{
+            display:block;
+            width: 235px;
+            margin-bottom: 10px;
+        }
+        .signup{
+            font-size:16px;
+            font-weight: 700;
+            color:white;
+            background-color: #2196F3;
+            border:none;
+            border-radius:5px;
+            width:268px;
+            padding: 5px 15px 5px 15px;
+        }
+        .from,.to{
+            display: block;
+            margin-bottom:8px;
+            border:none;
+            border-radius: 5px;
+            padding: 8px 15px 8px 15px;
+            background-color: rgb(241, 241, 241);
+            width: 250px;
+        }
+        .request{
+            font-size:14px;
+            font-weight: 700;
+            color:white;
+            background-color: #000000;
+            border:none;
+            color:white;
+            
+            padding: 5px 15px 5px 15px;
+        }
+        .schedule{
+            font-size:14px;
+            font-weight: 700;
+            color:white;
+            background-color: #ffffff;
+            border:0.2px solid black;
+            color:rgb(0, 0, 0);
+            padding: 5px 15px 5px 15px;
+
+        }
+    
+        
+    </style>
+
+</head>
+<body>
+    <input class ="first" type="text" placeholder="First name">
+    <input class ="second" type="text" placeholder="Second name">
+    <input class="email" type="email" placeholder="Email">
+    <button class = "signup">Signup</button>
+
+
+    <h2>Request a Ride Now</h2>
+    <input  class="from" type="text" placeholder="Enter pickup location">
+    <input class="to" type="text" placeholder="Enter destination">
+    <button class="request">Request Now</button>
+    <button class="schedule">Schedule for later</button>
+
+</body>
+</html>

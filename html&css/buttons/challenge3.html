@@ -1,0 +1,61 @@
+<!-- CSS Box model method -->
+<style>
+    .button-subscribe{
+        background-color: rgb(200, 0, 0);
+        color: white;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer; 
+        margin-right:8px;
+        padding: 10px 15px 10px 15px;
+        transition: opacity 0.5s;
+
+        /* CSS aligns itself useing text align naturally  */
+        /* to align the buttons we use  */
+
+        vertical-align: top;
+    }
+    .button-join{
+        background-color: white;
+        color:rgb(49, 143, 252);
+        border: solid 1px;
+        border-color: rgb(49, 143, 252);
+        padding: 9px 15px 9px 15px;
+        border-radius: 2px;
+        cursor: pointer;
+        margin-right: 8px;
+        transition: background-color 0.15s, color 0.15s;
+    }
+    .button-tweet{
+        color: white;
+        background-color:rgb(49, 143, 252);
+        border:none;
+        padding: 10px 15px 10px 15px;
+        border-radius: 20px;
+        cursor: pointer;
+        margin-right: 8px;
+        font-weight: bold;
+        font-size: 15;
+        transition: box-shadow 0.15s;
+    }
+    .button-subscribe:hover{
+        opacity: 0.8;
+    }
+    .button-subscribe:active{
+        opacity: 0.6;
+    }
+    
+    .button-join:hover{
+        background-color: rgb(49, 143, 252);
+        color:white;
+    }
+    .button-join:active{
+        opacity:0.8;
+    }
+    .button-tweet:hover{
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+    }
+</style>
+<button class="button-subscribe">SUBSCRIBE FOR MORE UPDATES</button>
+<button class="button-join">JOIN US NOW</button>
+<button class="button-tweet">Tweet</button><br>
