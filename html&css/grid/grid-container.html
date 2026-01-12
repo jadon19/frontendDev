@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid</title>
+    <style>
+        .grid-container{
+            height: 800px;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr ;
+            grid-template-rows:1fr 1fr 2fr ;
+            /* applies to the given height and not web size */
+            gap:1em;
+            margin-bottom:100px;
+            border:1px solid black;
+            padding:20px;
+
+            
+        }
+        .grid-container1{
+            display:grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 100px;
+            margin-bottom:100px;
+            border:1px solid black;
+            padding:20px;
+            gap:10px;
+        }
+        .grid-content{
+            background-color: lightblue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-content">1</div>
+        <div class="grid-content">2</div>
+        <div class="grid-content">3</div>
+        <div class="grid-content">4</div>
+        <div class="grid-content">5</div>
+        <div class="grid-content">6</div>
+        <div class="grid-content">7</div>
+        <div class="grid-content">8</div>
+        <div class="grid-content">9</div>
+    </div>
+
+    <div class="grid-container1">
+        <div class="grid-content">2</div>
+        <div class="grid-content">1</div>
+        
+    </div>
+</body>
+</html>

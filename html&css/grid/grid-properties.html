@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        .grid-container{
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 200px 200px 200px ;
+            grid-template-rows:200px 200px 200px ;
+            /* applies to 100 percent of view host or web size */
+            gap:1em;
+
+            /* alignment control of items */
+            justify-items: center;
+            align-items: center;
+            /* alignment control of content */
+            justify-content: center;
+            align-content: center;
+        }
+
+        .grid-content{
+            height: 150px;
+            width:150px;
+            background-color: lightblue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+     <div class="grid-container">
+        <div class="grid-content">1</div>
+        <div class="grid-content">2</div>
+        <div class="grid-content">3</div>
+        <div class="grid-content">4</div>
+        <div class="grid-content">5</div>
+        <div class="grid-content">6</div>
+        <div class="grid-content">7</div>
+        <div class="grid-content">8</div>
+        <div class="grid-content">9</div>
+    </div>
+</body>
+</html>
