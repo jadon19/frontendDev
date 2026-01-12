@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: 200px 200px 200px ;
+            grid-auto-rows: 200px;
+            /* applies to 100 percent of view host or web size */
+            gap:1em;
+
+        }
+        .grid-container1{
+            margin-top:200px;
+            display: grid;
+            grid-auto-columns: 200px;
+            grid-auto-rows: 200px;
+            grid-auto-flow: column;
+            gap:1em;
+
+        }
+
+        .grid-content{
+            background-color: lightblue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+     <div class="grid-container">
+        <div class="grid-content">1</div>
+        <div class="grid-content">2</div>
+        <div class="grid-content">3</div>
+        <div class="grid-content">4</div>
+        <div class="grid-content">5</div>
+        <div class="grid-content">6</div>
+        <div class="grid-content">7</div>
+        <div class="grid-content">8</div>
+        <div class="grid-content">9</div>
+        <div class="grid-content">extra</div>
+        <div class="grid-content">extra</div>
+    </div>
+
+    <div class="grid-container1">
+        <div class="grid-content">1</div>
+        <div class="grid-content">2</div>
+        <div class="grid-content">3</div>
+        <div class="grid-content">4</div>
+        <div class="grid-content">5</div>
+        <div class="grid-content">6</div>
+        <div class="grid-content">7</div>
+        <div class="grid-content">8</div>
+        <div class="grid-content">9</div>
+        <div class="grid-content">extra</div>
+        <div class="grid-content">extra</div>
+    </div>
+</body>
+</html>
