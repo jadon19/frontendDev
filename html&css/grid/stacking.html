@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html l>
+<head>
+    <title>Grid stacking</title>
+    <style>
+        .grid-container{
+            display:grid;
+            width: 300px;
+            place-items: end;
+        }
+        .text{
+            background-color: rgba(0, 0, 0, 0.5); 
+            color:white;
+            padding:5px 10px 5px 10px;
+            width: 280px;
+            border-radius: 15px;
+            height: max-content;
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        
+        img{
+            width: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div class="stack"
+    style="display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:100px 100px">
+        <div style="background-color: lightblue;
+        grid-column: 1/3; grid-row: 1/2;"></div>
+        <div style="background-color: lightcoral;
+        grid-column: 2/4; grid-row: 1/2;
+        opacity: 0.6;"></div>
+
+    </div>
+    <div class="grid-container">
+        <img src="../challenges/kitty-cat-kitten-pet-45201.jpeg" alt="">
+        <div class="text">
+            <h3 style="padding: 0px; margin:0px; margin-bottom: 4px;">Hello World</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptatem. 
+        </div>
+    </div>
+    
+</body>
+</html>
