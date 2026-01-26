@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Facebook</title>
+    <style>
+        body {
+            padding-top: 80px;
+            padding-left: 230px;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgb(204, 202, 202);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            position: fixed;
+            top: 0;
+            left: 250px;
+            right: 0;
+            background-color: white;
+            padding: 10px;
+
+        }
+
+        .header-start {
+            display: flex;
+            gap: 10px;
+            padding-left: 16px;
+        }
+
+        .header-end {
+            padding-right: 20px;
+        }
+
+        button {
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .button-add {
+            background-color: rgb(3, 178, 236);
+            color: white;
+
+        }
+
+        .button-msg {
+            background-color: rgb(215, 215, 215);
+            color: black;
+
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: row;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            top: 0;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .sidebar1 {
+            background-color: rgb(42, 42, 42);
+            color: white;
+            width: 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .sidebar2 {
+            background-color: rgb(76, 76, 76);
+            color: white;
+            width: 170px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            font-weight: 700;
+        }
+
+        .links {
+            color: rgb(196, 192, 192);
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-start">
+            <img src="../challenges/kitty-cat-kitten-pet-45201.jpeg" alt="">
+            <p style="font-size: 18px; font-weight: 700;">Oliver Cat</p>
+        </div>
+        <div class="header-end">
+            <button class="button-add">View Profile</button>
+            <button class="button-msg">Settings</button>
+        </div>
+
+    </div>
+    <div class="sidebar">
+        <div class="sidebar1">
+            <img src="../challenges/images.jpg" alt="">
+            <img src="../challenges/photo-1529778873920-4da4926a72c2.jpg" alt="">
+            <img src="../challenges/kitty-cat-kitten-pet-45201.jpeg" alt="">
+        </div>
+        <div class="sidebar2">
+            <div class="info">
+                <div>
+                    INFO
+                </div>
+                <div style="color: rgb(179, 179, 179);">+</div>
+            </div>
+            <div class="links">
+                <p>#videos</p>
+                <p>#updates</p>
+                <p>#faq</p>
+            </div>
+
+        </div>
+    </div>
+    <div style="
+    width: 900px;
+            border: 1px solid rgb(223, 221, 221);
+            box-shadow: 5px 5px 8px rgb(215, 215, 215);
+            margin: 30px;
+            padding: 8px;
+            border-radius: 3px;">
+        <div style="color: rgb(101, 101, 101);
+            font-size: 16px;
+            margin-bottom:20px;">
+            ALL INBOXES
+        </div>
+        <div style="display:flex;
+            gap: 20px;
+            margin-top: 10px;
+            width: 100%;
+            margin-bottom:20px;">
+            <div><img src="../challenges/kitty-cat-kitten-pet-45201.jpeg" alt=""></div>
+            <div style="flex:1;">
+                <div style="display: flex;
+            align-items:center;
+            justify-content:space-between;">
+                    <div style="font-weight: bold;
+            font-size: 18px;
+            flex:1;">Chewy Productions</div>
+                    <div style="
+            width:70px;
+            color: rgb(128, 128, 128);">10:45 AM</div>
+                </div>
+                <div style="margin-top:3px;
+            font-weight: 600;
+            font-size:16px;">Biggest sales of the Year</div>
+                <div style="margin-top:4px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical; 
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 14px;
+            color:grey;">Hey Tanishka,
+                    Tomorrow the price goes back to $147.
+                    Lead Guitar Jumpstart is $97 until the timer hits zero.
+                    Everything inside stays the same - 8 modules, backing tracks, lifetime access.
+                    Just $50 more after the timer hits zero.
+                    If you set a goal this year to finally learn lead guitar, this is the moment to act on it</div>
+            </div>
+        </div>
+
+
+        <div style="display:flex;
+            gap: 20px;
+            margin-top: 10px;
+            width:100%;
+            margin-bottom:20px;">
+            <div><img src="../challenges/images.jpg" alt=""></div>
+            <div style="flex:1;">
+                <div style="display: flex;
+            align-items:center;
+            justify-content:space-between;">
+                    <div style="font-weight: bold;
+            font-size: 18px;
+            flex:1;">LinkedIn</div>
+                    <div style="
+            width:70px;
+            color: rgb(128, 128, 128);">11.34 PM</div>
+                </div>
+                <div style="margin-top:3px;
+            font-weight: 600;
+            font-size:16px;">New jobs similar to SDE-1 at Amazon</div>
+                <div style="margin-top:4px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical; 
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 14px;
+            color:grey;">Jobs similar to SDE-1 at Amazon</div>
+            </div>
+        </div>
+
+
+        <div style="display:flex;
+            gap: 20px;
+            margin-top: 10px;
+            width: 100%;
+            margin-bottom:20px;">
+            <div><img src="../challenges/logo-removebg-preview.png" alt=""></div>
+            <div style="flex:1;">
+                <div style="display: flex;
+            align-items:center;
+            justify-content:space-between;">
+                    <div style="font-weight: bold;
+            font-size: 18px;
+            flex:1;">Unstop Events</div>
+                    <div style="
+            width:70px;
+            color: rgb(128, 128, 128);">09.33 PM</div>
+                </div>
+                <div style="margin-top:3px;
+            font-weight: 600;
+            font-size:16px;">Microsoft is hiring interns - Your profile is a match!</div>
+                <div style="margin-top:4px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical; 
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 14px;
+            color:grey;">Internship Alert!
+
+                    Microsoft is hiring for the role of Software Engineering Intern!
+
+                    Application Link: Click Here
+
+                    What’s in it for you?
+
+                    Stipend: ₹80,000 per month
+                    Internship Duration: 3 months
+                    Internship Type: In Office</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div style="
+    display: grid;
+    margin-left: 50px;
+    grid-template-columns: 250px 250px 250px;
+    height: 250px;
+    gap:40px;">
+        <div style="display: flex;
+        flex-direction: column;
+        gap:10px;
+        border:3px solid rgb(155, 230, 255);
+        padding:15px;
+        border-radius: 30px;
+        align-items: center;
+        ">
+            <div style="
+                color:rgb(0, 113, 150);
+                font-weight: 700;
+                font-size: 42px;">Requests</div>
+            <div style="flex:1; text-align: center;">Manage incoming connection requests, collaboration invites, and profile interactions.</div>
+            <div><button class="button-add">View requests</button></div>
+        </div>
+        
+
+        <div style="display: flex;
+        flex-direction: column;
+        gap:10px;
+        border:3px solid rgb(155, 230, 255);
+        padding:15px;
+        border-radius: 30px;
+        align-items: center;
+        ">
+            <div style="
+                color:rgb(0, 113, 150);
+                font-weight: 700;
+                font-size: 42px;">Activity</div>
+            <div style="flex:1; text-align: center;">Check  recent activity to build meaningful connections.
+Engage through messages, follows, or shared interests.</div>
+            <div><button class="button-add">View activity</button></div>
+        </div>
+
+        <div style="display: flex;
+        flex-direction: column;
+        gap:10px;
+        border:3px solid rgb(155, 230, 255);
+        padding:15px;
+        border-radius: 30px;
+        align-items: center;
+        ">
+            <div style="
+                color:rgb(0, 113, 150);
+                font-weight: 700;
+                font-size: 42px;">Posts</div>
+            <div style="flex:1; text-align: center;">Browse posts, photos, or updates on the platform.
+Stay in sync.</div>
+            <div><button class="button-add">View posts</button></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
