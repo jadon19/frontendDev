@@ -44,6 +44,7 @@ button{
 }
 .voice-icon{
     width: 25px;
+    position: relative;
     
 }
 .search-icon{
@@ -52,6 +53,29 @@ button{
     border-left:1px solid rgb(211, 211, 211);
     background-color: rgb(235, 231, 231);
     cursor: pointer;
+    position: relative;
+}
+.tooltip{
+    background-color: rgb(79, 79, 79);
+    color:white;
+    padding:2px 4px 2px 4px;
+    opacity: 0;
+}
+.search-icon .tooltip{
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+}
+.voice-icon .tooltip{
+    position: absolute;
+    width: 180px;
+    bottom:-30px;
+}
+.search-icon:hover .tooltip{
+    opacity: 1;
+}
+.voice-icon:hover .tooltip{
+    opacity: 1;
 }
 
 .search{
@@ -85,6 +109,7 @@ button{
 .icon{
     cursor: pointer;
 }
+
 
 .profile img {
     width: 100%;
