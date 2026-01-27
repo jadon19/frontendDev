@@ -44,3 +44,20 @@
     row-gap: 20px;
     
 }
+.thumbnail-row{
+    position:relative;
+    
+}
+.timestamp{
+    background-color: rgb(0, 0, 0);
+    color:white;
+    width:fit-content;
+    padding:2px;
+    padding-left:2px;
+    padding-right:2px;
+    font-weight: 600;
+    font-size: 14px;
+    position:absolute;
+    bottom:10px;
+    right:10px;
+}
