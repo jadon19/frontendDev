@@ -5,4 +5,23 @@
     width:100px;
     bottom:0;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top:20px;
+    z-index: 2;
+}
+.sidebar-link{
+    margin-bottom: 1px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    padding-bottom:15px;
+    padding-top: 15px;
+    transition: background-color 0.15s ease;
+    cursor:pointer;
+}
+.sidebar-link:hover{
+    background-color: lightgrey;
 }
