@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript basics</title>
+    <style>
+        button{
+            padding:10px 15px 10px 15px;
+            border:none;
+            border-radius: 4px;
+            color:white;
+            margin-bottom:10px;
+        }
+        .checkout{
+            background-color: rgb(0, 200, 0);
+        }
+        .show{
+            background-color: rgb(0, 176, 235);
+        }
+        .add{
+            background-color: orange;
+        }
+        .add-2{
+            background-color: rgb(113, 0, 141);
+        }
+        .add-3{
+            background-color: rgb(164, 0, 115);
+        }
+        .reset{
+            background-color: red;
+        }
+        .remove{
+            background-color: rgb(150, 0, 25);
+        }
+        button:hover{
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <h2>Cart quantity</h2>
+    <h4>Amount: $45</h4>
+    <button class="show" onclick="console.log(`Cart quantity: ${Cartquant}`)">Show Cart</button>
+    <button class="add" 
+        onclick="Cartquant+=1; console.log('Added to cart')">
+        Add to Cart
+    </button>
+    <button class="add-2"
+        onclick="Cartquant+=2; console.log('Added 2 quantity to cart')"
+        >+2
+    </button>
+    <button class="add-3"
+        onclick="Cartquant+=3; console.log('Added 3 quantity to cart')"
+        >+3
+    </button>
+    <button class="remove"
+        onclick=
+        "
+        if(Cartquant==0){
+            alert('Cart is Empty!');
+        }
+        else{
+            Cartquant-=1; 
+            console.log('1 Quantity removed from cart')
+        }"
+        >Remove
+    </button>
+    <button class="reset"
+        onclick="Cartquant=0; 
+        console.log('Cart Reset')">
+        Reset Cart
+    </button>
+    <br>
+    <button class='checkout' onclick="alert(`Proceeding for checkout: Total $${Cartquant*45}`)">Checkout</button>
+
+    <script>
+        let Cartquant = 0;
+    </script>
+</body>
+</html>
