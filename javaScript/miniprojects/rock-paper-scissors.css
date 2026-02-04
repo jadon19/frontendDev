@@ -1,0 +1,62 @@
+body{
+    font-family: Arial;
+    background-color: black;
+    color:white;
+    display: flex;
+    justify-content: center;  /* horizontal center */
+    align-items: center;  
+        }
+.game{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    align-items: center;
+    border:3px solid white;
+    padding:10px;
+}
+button {
+    border: none;
+    border-radius: 2px;
+    padding: 10px 15px 10px 15px;
+    cursor: pointer;
+}
+.move-button{
+    background-color: transparent;
+    border:3px solid white;
+    border-radius: 50%;
+    margin-left:10px;
+    padding:40px;
+}
+.move-icon {
+    height:80px;
+}
+.js-result{
+    font-size:20px;
+    font-weight: 600;
+    margin-bottom:5px;
+}
+.class-choice{
+    display: flex;
+    gap:10px;
+}
+.user-move , .computer-move{
+    position: relative; 
+    border:1px solid white;
+}
+
+
+.player-name{
+    position: absolute; 
+    left:0px; 
+    right:0px; 
+    text-align: center; 
+    font-weight:600; 
+    background-color: white; 
+    color:black; 
+    padding:8px 10px 8px 10px;
+    font-size: 12px;
+}
+.move-icon-choice{
+    height:50px;
+    padding:40px 10px 10px 10px;
+}

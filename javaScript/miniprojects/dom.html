@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dom Projects</title>
+    <link rel="stylesheet" href="dom_youtube.css">
+    <link rel="stylesheet" href="dom_shipping.css">
+</head>
+<body>
+    <div class="youtube">
+        <h2>Youtube subscribe button</h2>
+        <button 
+            class="subscribe-button"
+            onclick="changeStyle();">
+                Subscribe
+        </button>
+    </div>
+    <div class="shipping-calculation">
+        <h2>Calculate Shipping Cost</h2>
+        <p>Orders under $40 = +$10 shipping.</p>
+        <p>Orders over $40 = FREE shipping.</p>
+        <input 
+            type="number" 
+            onkeydown="
+                if (event.key === 'Enter'){
+                    calculateShipCost();
+                }"
+            id="cost"
+            placeholder="Type cost...">
+        <button 
+            class="calculate"
+            onclick="calculateShipCost();">
+            Calculate
+        </button>
+        <p class="js-total"></p>
+    </div>
+
+
+    <script src="dom_youtube.js"></script>
+    <script src="dom_shipping.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        const product = {
+            item: 'socks',
+            price: 450,
+            rating:{
+                count:45,
+                start:3.4
+            },
+            myFun: function function1(){
+                console.log("A function inside an object");
+            }
+        };
+        console.log(product);
+        product.item = "potato";
+        product.newItem ="socks";
+
+        //view object 
+        console.log(product);
+
+        //delete attribute
+        delete product.newItem;
+        console.log(product);
+
+        //accessing attribute which doesnt exist -> undefined
+        console.log(product.quant);
+
+        //bracket notation with attribute in string
+        //used for inside calculation 
+        console.log(product['item']);
+
+        //access object inside an object
+        console.log(product.rating.count);
+
+        //writing a function within an object
+        product.myFun();
+
+        //JSON
+        //Difference:  all string in "", no functions inside object
+        const jsonString =JSON.stringify(product);
+        console.log(jsonString);
+        console.log(JSON.parse(jsonString));
+
+        //Auto-boxing
+        //js automatically wraps an object around datatype and apply methods/property on it
+        console.log('hello'.length);
+
+        //Objects are reference to the stored data
+        const object1={
+            message: "hello from a memory location"
+        };
+        const object2 = object1;
+        //both object reference the same memory location (no copy->efficient)
+        //called copy by reference
+
+        object1.message="can change";
+        
+        console.log(object1);
+        console.log(object2);
+        //changes reflect in both
+
+
+
+        //cannot reassign the address/reference to already created 'const' object 
+        // object1 = {
+        //     item: 45
+        // };
+        // console.log(object1);
+
+        const object3={
+            message: "can change"
+        }
+
+        console.log(object1===object3);
+        //both point to different memory location/reference
+        //even if they have same content
+
+        //Destructuring
+        const object4 = {
+            message:"hello",
+            price:455
+        };
+        const {message, price} = object4;
+        console.log(message,price);
+
+        //shorthand property
+        const object5 ={
+            message,
+            method() {
+                console.log("method inside object 5");
+            }
+        };
+        console.log(object5);
+        object5.method();
+
+
+
+    </script>
+</body>
+</html>
