@@ -1,0 +1,127 @@
+1. JavaScript Function
+
+A function is a reusable block of code designed to perform a specific task.
+Functions help in reducing repetition, improving readability, and organizing logic.
+A function can accept inputs (parameters) and may return a result.
+Functions are executed only when they are called.
+
+2. DOM (Document Object Model)
+
+The DOM is a programming interface created by the browser from HTML.
+It represents the webpage as a tree structure that JavaScript can access and modify.
+Using the DOM, JavaScript can read, change, add, or remove HTML elements dynamically.
+The document object represents the entire webpage.
+
+3. Selecting Elements from the DOM
+
+JavaScript provides multiple ways to access HTML elements.
+
+getElementById()
+
+Selects a single element using its id
+
+Id must be unique
+
+Faster and commonly used
+
+Returns one element or null
+
+querySelector()
+
+Selects the first element matching a CSS selector
+
+Uses CSS syntax like #id, .class, tag
+
+More flexible than getElementById
+
+querySelectorAll()
+
+Selects all elements matching a CSS selector
+
+Returns a NodeList (collection of elements)
+
+Used when working with multiple similar elements
+
+Difference Summary
+
+getElementById → single element, id only
+
+querySelector → first match, CSS-based
+
+querySelectorAll → multiple matches, CSS-based
+
+4. Events and Event Listeners
+
+An event is an action performed by the user or browser, such as click, keypress, or scroll.
+JavaScript listens for events using addEventListener().
+When the specified event occurs, the associated function is executed.
+Using event listeners is preferred over inline event handlers because it keeps HTML and JavaScript separate.
+
+5. Data Attributes (data-*)
+
+Data attributes are custom HTML attributes used to store extra information.
+They do not affect page behavior by themselves.
+JavaScript can read them using getAttribute().
+They are commonly used to link UI elements with logic.
+
+6. Synchronous vs Asynchronous Execution
+
+Synchronous Execution
+
+Tasks run one after another
+
+Next task waits until the previous task finishes
+
+Can block the browser and make the page unresponsive
+
+Asynchronous Execution
+
+Long tasks run in the background
+
+JavaScript continues execution
+
+Browser remains responsive
+
+JavaScript uses asynchronous execution for network requests and timers.
+
+7. fetch()
+
+fetch() is used to request resources such as HTML files or APIs.
+It is asynchronous and does not return the result immediately.
+Instead, it returns a Promise representing a future value.
+
+8. Promise
+
+A Promise is an object that represents the eventual completion or failure of an asynchronous operation.
+It has three states: pending, fulfilled, and rejected.
+Promises allow JavaScript to handle delayed operations without blocking execution.
+
+9. then()
+
+.then() is used to handle the successful completion of a Promise.
+It runs after the Promise is fulfilled.
+Multiple .then() calls can be chained to perform step-by-step processing.
+
+10. response.text()
+
+When fetch() completes, it returns a Response object.
+response.text() converts the response into readable text, such as HTML content.
+This step is required before displaying fetched content.
+
+11. innerHTML
+
+innerHTML represents all the HTML inside an element.
+Setting innerHTML replaces existing content with new content.
+It is commonly used to dynamically update page sections.
+
+12. Error Handling using catch()
+
+.catch() handles errors in asynchronous code.
+It executes when a Promise is rejected.
+Proper error handling prevents blank screens and improves user experience.
+
+13. Single Page Application Behavior
+
+When only part of a webpage changes without reloading the entire page, it is called SPA behavior.
+This is achieved by dynamically replacing content using JavaScript.
+Navigation feels faster and smoother to users.

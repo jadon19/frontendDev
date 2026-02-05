@@ -1,0 +1,39 @@
+button{
+    border:none;
+    padding:10px 15px 10px 15px;
+    width: 100px;
+
+}
+body{
+    padding-top:60px;
+    padding-left:20px;
+    font-family: Arial;
+}
+h3{
+    margin:0px;
+    padding:0px;
+}
+button:hover{
+    text-decoration: underline;
+}
+.navbar{
+    display: flex;
+    height:50px;
+    justify-content:space-between;
+    align-items: center;
+    border:1px solid black;
+    position: fixed;
+    top:0px;
+    left:0px;
+    right:0px;
+    padding-left:10px;
+}
+.buttons{
+    display: flex;
+    height: 100%;
+    gap:2px;
+}
+.button-active{
+    background-color: black;
+    color:white;
+}
