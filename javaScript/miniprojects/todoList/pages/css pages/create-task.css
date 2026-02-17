@@ -1,0 +1,127 @@
+.js-create-task{
+    display:flex;
+    flex-direction: column;
+    gap:10px;  
+}
+.create-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom:30px;
+}
+.create-task{
+    font-size: 24px;
+    color:rgb(72, 72, 72);
+}
+.close-icon{
+    width: 20px;
+    height: 20px;
+}
+.close-icon-button{
+    background-color: white;
+    border:none;
+    cursor:pointer;
+}
+.heading{
+    font-size: 14px;
+    border:1px solid rgb(213,213,213);
+    border-radius: 10px;
+    padding:10px;
+    width:300px;
+     background-color: #fafafa;
+    transition: border 0.2s ease, background-color 0.2s ease;
+}
+.heading:focus{
+    border-color: #a8a8a8;
+    background-color: #fff;
+}
+
+.description {
+    width: 295px;
+    min-height: 120px;
+    resize: none;              /* prevents drag resize */
+    border: 1px solid #dbdbdb; /* soft Instagram-like border */
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+    font-family: inherit;
+    background-color: #fafafa;
+    transition: border 0.2s ease, background-color 0.2s ease;
+}
+
+.description:focus {
+    outline: none;
+    border-color: #a8a8a8;
+    background-color: #fff;
+}
+.due-date {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.date {
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    background-color: #f1f5f9;
+    color: #1e293b;                 
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.date:focus {
+    outline: none;
+    border-color: #22c55e;          
+    background-color: #ecfdf5;      
+}
+
+.save-btn {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #22c55e;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.save-btn:hover {
+    background-color: #16a34a;
+}
+.tag {
+    display: flex;
+    gap: 18px;
+    font-size: 16px;
+    align-items: top;
+    flex:1;
+    
+}
+
+.tag-btn {
+    border: none;
+    padding: 6px 14px;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 700;
+    color: white;
+}
+
+
+.tag-btn[data-color="blue"] {
+    background-color: #3b82f6;
+}
+
+.tag-btn[data-color="orange"] {
+    background-color: #f97316;
+}
+
+.tag-btn[data-color="red"] {
+    background-color: #ef4444;
+}
+

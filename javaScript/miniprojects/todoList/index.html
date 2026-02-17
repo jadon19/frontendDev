@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ToDo Application</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="pages/css pages/today.css">
+    <link rel="stylesheet" href="pages/css pages/create-task.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="menu">
+            <div class="title-menu">
+                <p>Menu</p>
+            </div>
+            <div>
+                <img class="icon-menu" src="assets/menu-icon.png" alt="">
+            </div>
+        </div>
+        <div class="title-search">
+            <div>
+                <img class="sidebar-icon" src="assets/search-icon.png" alt="">
+            </div>
+            <div>
+                <input  class="search-bar" type="text" placeholder="Search">
+            </div>
+        </div>
+        <div class="title-task">
+            <div class="task">
+                Tasks
+            </div>
+            <div class="task-content">
+                
+                <div class="sidebar-title">
+                    <div class="sub-title">
+                        <div><img class="sidebar-icon" src="assets/today-icon.png" alt=""></div>
+                        <div>Today</div>
+                    </div>
+                    <div class="sidebar-count"></div>
+                </div>
+                <div class="sidebar-title" >
+                    <div class="sub-title">
+                        <div><img class="sidebar-icon"src="assets/sticky_note-icon.png" alt=""></div>
+                        <div>Sticky Wall</div>
+                    </div>
+                </div>
+                <div class="sidebar-title">
+                    <div class="sub-title">
+                        <div><img class="sidebar-icon" src="assets/upcoming-icon.png" alt=""></div>
+                        <div>Progress</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="account">
+            <div class="setting">
+                <div><img class="sidebar-icon" src="assets/settings-icon.png" alt=""></div>
+                <div>Settings</div>
+            </div>
+            <div class="logout">
+                <div><img class="sidebar-icon"src="assets/logout-icon.png" alt=""></div>
+                <div>Logout</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="website-layout">
+        <div class="todo-list">
+            <div class="page-title">
+                <h1>Today</h1>
+                <p class="js-count page-count" >5</p>
+            </div>
+            <div class="add-task">
+                <button class="page-icon-button"><img class="js-open-task page-icon" src="assets/plus-icon.png" alt=""></button>
+                <input class="search-task" type="text" placeholder="Search Task">
+            </div>
+            <div class="js-tasks-list">
+                    <!-- js -->
+            </div>
+        </div>
+        <div class="js-create-task js-view-task">
+            <!-- if user clicks add task-creat-task html will be displayed -->
+        </div>  
+    </div>
+    <script src="pages/js pages/create-task.js"></script>
+</body>
+</html>

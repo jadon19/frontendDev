@@ -1,0 +1,113 @@
+body{
+    font-family: sans-serif;
+}
+p{
+    padding:0px;
+    margin:0px;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    width:250px;
+    gap:10px;
+    background-color: rgb(243, 243, 243);
+    padding:12px;
+    border-radius: 15px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+}
+.title-menu{
+    font-size: 20px;
+    font-weight: 700;
+}
+.icon-menu{
+    height:20px;
+    cursor: pointer;
+}
+.menu{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+
+}
+.title-search{
+    display: flex;
+    margin:5px;
+    padding:5px;
+    gap:4px;
+    align-items: center;
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 18px;
+}
+.sidebar-icon{
+    height: 20px;
+}
+.search-bar{
+    height:30px;
+    border:none;
+    font-size: 14px;
+    background-color: rgb(243, 243, 243);
+}
+.search-bar:focus{
+    outline:none;
+}
+
+.title-task{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    flex:1;
+}
+.task{
+    font-weight: 700;
+    font-size: 16px;
+    color:rgb(100, 100, 100);
+}
+.task-content{
+    display: grid;
+    grid-template-rows:30px 30px 30px;
+    padding-left:10px;
+    gap:2px;
+}
+
+.sidebar-title{
+    display:flex;
+    justify-content: space-between;
+    padding-right:10px;
+    cursor: pointer;
+}
+.sub-title{
+    display: flex;
+    gap:5px;
+    cursor: pointer;
+}
+.sidebar-count{
+    background-color: rgb(235, 233, 233);
+    height: fit-content;
+    padding:2px 8px 2px 8px;
+    border-radius: 6px;
+    opacity: 0;
+}
+.account{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.setting , .logout{
+    display: flex;
+    gap:5px;
+    cursor: pointer;
+}
+.website-layout{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    margin-left: 300px;
+    padding:10px;
+    align-items: top;
+    column-gap: 30px;
+    height: 100vh;
+}
