@@ -27,8 +27,8 @@
     border:1px solid rgb(213,213,213);
     border-radius: 10px;
     padding:10px;
-    width:300px;
-     background-color: #fafafa;
+    width:95%;
+    background-color: #fafafa;
     transition: border 0.2s ease, background-color 0.2s ease;
 }
 .heading:focus{
@@ -37,11 +37,11 @@
 }
 
 .description {
-    width: 295px;
+    width: 95%;
     min-height: 120px;
     resize: none;              /* prevents drag resize */
     border: 1px solid #dbdbdb; /* soft Instagram-like border */
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 10px 12px;
     font-size: 14px;
     font-family: inherit;
@@ -99,7 +99,7 @@
     gap: 18px;
     font-size: 16px;
     align-items: top;
-    flex:1;
+    
     
 }
 
@@ -109,19 +109,40 @@
     font-size: 12px;
     cursor: pointer;
     font-weight: 700;
-    color: white;
+    background-color: white;
+    border-radius: 8px;
 }
 
 
 .tag-btn[data-color="blue"] {
-    background-color: #3b82f6;
+    color: #3b82f6;
+    border: 1px solid #3b82f6;
 }
 
 .tag-btn[data-color="orange"] {
-    background-color: #f97316;
+    color: #f97316;
+    border: 1px solid #f97316;
 }
 
 .tag-btn[data-color="red"] {
+    color: #ef4444;
+    border: 1px solid #ef4444;
+}
+
+.tag-btn.active {
+    color: white;
+}
+
+.tag-btn.active[data-color="blue"] {
+    background-color: #3b82f6;
+}
+
+.tag-btn.active[data-color="orange"] {
+    background-color: #f97316;
+}
+
+.tag-btn.active[data-color="red"] {
     background-color: #ef4444;
 }
+
 
