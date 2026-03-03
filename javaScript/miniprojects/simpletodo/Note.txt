@@ -1,0 +1,18 @@
+Rendering div objects:
+
+fetch() returns an HTML file as a string, so it must be parsed (via innerHTML, DOMParser, or preferably <template>) to become real DOM elements.
+
+Content inside <template> is stored in template.content (a DocumentFragment) and is not part of the main document DOM, so document.querySelector() cannot access it directly.
+So how do we access it? -> we first access the template using dom, then using template.content (object) we access things present inside template ->template.content.querySelector(".class_name")
+
+
+A DOM node (every element is a dom node) can have only one parent.
+Therefore, it can appear in only one location in the document structure.
+
+If you append an element from template.content directly into some other div then, it gets moved(not copied), it gets removed from the template, because DOM nodes can exist in only one place.
+
+
+Therefore, we use cloneNode(true) to create a deep copy, append the copy, and keep the original template intact for reuse.
+
+
+Event delegation

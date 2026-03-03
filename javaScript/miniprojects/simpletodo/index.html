@@ -2,17 +2,21 @@
 <html>
 <head>
     <title>Simple to do</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <p>Todo list practice 1</p>
 
     <input type="text" class="js-title" placeholder="Enter task title"> 
-    <br><br>
+    <br>
+    <p class="js-title-error"></p>
     <textarea class="js-description"  rows="5" cols="40" placeholder="Enter description"></textarea>
     <br><br>
-    <input type="date" class="js-due-date"> <br><br>
+
+    <input type="date" class="js-due-date"> <br>
+    <p class="js-due-date-error"></p>
     <button class="js-add-task-button">Add task</button>
-    <div class="js-task-list">
+    <div class="js-task-list task-list">
         
     </div>
     <script src="index.js"></script>

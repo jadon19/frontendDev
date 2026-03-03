@@ -1,0 +1,16 @@
+.task-row{
+    display: flex;
+    gap:20px;
+    padding-bottom:10px;
+    padding-top:10px;
+    border-bottom: 1px solid black;
+    max-width: 900px;
+}
+.css-title{
+    min-width: 200px;
+    flex:1;
+}
+.css-description{
+    min-width: 300px;
+    flex:2;
+}
