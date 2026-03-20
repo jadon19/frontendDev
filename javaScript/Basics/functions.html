@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sync and Async</title>
+</head>
+<body>
+
+    <script>
+        // a setTimeout function expects a fucntion reference not the function itself
+
+        setTimeout(function(){
+            console.log("after 5 seconds");
+        },5000);
+        // js evaluates the arguments first and later execute the function after timer ends
+        console.log("this wont wait for the above code, hence it is async code");
+
+        const id = setInterval(function(){
+            console.log("every three seconds")
+        },3000); 
+        clearInterval(id);
+        // stop at a condition with its id or else it keeps on running or never runs
+
+    </script>
+</body>
+</html>

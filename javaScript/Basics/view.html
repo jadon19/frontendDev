@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden{
+            display: none;
+        }
+        button{
+            padding:10px 15px 10px 15px;
+            font-size: 16px;
+            border: none;
+            background-color: rgb(0, 80, 107);
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="buttons">
+        <button data-view = ".default">show div1</button>
+        <button data-view = ".div2" >show div2</button>
+        <button data-view = ".div3" >show div3</button>
+        <div>blah</div>
+        <p>para</p>
+    </div>
+    <div class="view default">
+        <h2>heading of first div</h2>
+        <p>paragraph of first div</p>
+    </div>
+    <div class="view div2 hidden">
+        <h2>heading of second div</h2>
+        <p>paragraph of second div</p>
+    </div>
+    <div class="view div3 hidden">
+        <h2>heading of third div</h2>
+        <p>paragraph of third div</p>
+    </div>
+</body>
+<script>
+    function showView(selector){
+        let viewList = document.querySelectorAll(".view");
+        viewList.forEach((v)=>{
+            v.classList.add("hidden");
+        });
+        document.querySelector(selector).classList.remove("hidden");
+    };
+    document.querySelector(".buttons").addEventListener("click",(e)=>{
+        console.log(e);
+        if (e.target.tagName === "BUTTON"){
+           const view= e.target.dataset.view;
+           showView(view);
+        }
+    });
+
+</script>
+</html>

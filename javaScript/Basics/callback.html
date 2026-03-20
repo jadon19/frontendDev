@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Call back</title>
+</head>
+<body>
+    <script>
+        hello(goodbye);
+        function hello(callback){
+            setTimeout(()=>{
+                console.log("after 3 seconds");
+                callback();
+            },3000);
+            
+        }
+        function goodbye(){
+            console.log("goodbye");
+        }
+    </script>
+</body>
+</html>
