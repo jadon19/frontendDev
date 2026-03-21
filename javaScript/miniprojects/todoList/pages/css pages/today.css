@@ -10,6 +10,7 @@ h1{
     display: flex;
     flex-direction: column;
     gap:30px;
+    overflow-y: auto;
 }
 .page-count{
     background-color: rgb(237, 237, 237);
@@ -19,11 +20,12 @@ h1{
 .page-icon-button{
     border:none;
     background-color: white;
-    cursor:pointer;
+    
 }
 .page-icon{
     height: 20px;
     opacity: 0.7;
+    cursor:pointer;
 }
 .add-task{
     display:flex;
@@ -48,7 +50,6 @@ input:focus{
     gap:10px;
 }
 
-/* js */
 .task{
     display: flex;
     align-items: center;
@@ -62,5 +63,92 @@ input:focus{
 .task-title{
     color:rgb(37, 37, 37);
 }
+.css-tasks-list{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+.task-item{
+    display: grid;
+    grid-template-columns: 50px auto 50px;
+    column-gap: 10px;
+    align-items: center;
+    border-bottom: 0.2px solid rgb(230, 230, 230);
+    padding-bottom: 5px;
+    
+}
+.open-task{
+    width: 20px;
+    
+}
+.open-task-btn{
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
+}
+.css-mark-done{
+    cursor: pointer;
+}
+.icon-empty-list{
+    width: 80px;
+    background-color: transparent;
+}
+.display-empty{
+    margin: 0 auto;
+    height: 500px;
+    text-align: center;
+    align-content: center;
+    font-family: Arial;
+}
+.empty-msg{
+    color: gray;
+    margin:-5px;
+}
+.buttons{
+    height: 40px;
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    padding-right: 5px;
+}
+.mark-as-done-task {
+    background-color: #16a34a; 
+    color: #f9fafb;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
 
+    
+}
+.mark-as-done-task:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
 
+.delete-task {
+    background-color: #b91c1c;  
+    color: #f9fafb;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.delete-task:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.hidden {
+    display: none;
+}

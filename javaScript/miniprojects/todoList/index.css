@@ -45,6 +45,8 @@ p{
 }
 .sidebar-icon{
     height: 20px;
+    background-color: transparent;
+    cursor: pointer;
 }
 .search-bar{
     height:30px;
@@ -69,7 +71,7 @@ p{
 }
 .task-content{
     display: grid;
-    grid-template-rows:30px 30px 30px;
+    grid-template-rows:30px 30px 30px 30px;
     padding-left:10px;
     gap:2px;
 }
@@ -80,10 +82,16 @@ p{
     padding-right:10px;
     cursor: pointer;
 }
-.sub-title{
+.sub-title {
     display: flex;
-    gap:5px;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    background: none;
+    border: none;
     cursor: pointer;
+    width: 100%;
+    text-align: left;
 }
 .sidebar-count{
     background-color: rgb(235, 233, 233);
@@ -109,5 +117,10 @@ p{
     padding:10px;
     align-items: top;
     column-gap: 30px;
-    height: 100vh;
+    height: 95vh;
+}
+button{
+    background-color: none;
+    border:none;
+    padding:0px;
 }

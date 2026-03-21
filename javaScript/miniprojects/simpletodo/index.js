@@ -72,7 +72,11 @@ function printTasks(){
 
                 const toDelete = taskElement.querySelector(".js-delete");
                 toDelete.addEventListener("click",()=>deleteTask(task.id));
-
+                const toMarkAsComplete = taskElement.querySelector(".js-status-completed");
+                toMarkAsComplete.addEventListener("click",()=>{
+                    task.status="completed";
+                    printTasks();
+                })
 
                 area.appendChild(taskElement);
             }
@@ -88,6 +92,7 @@ function deleteTask(id){
     }
     printTasks();
 }
+
 function getISTDateString() {
     const now = new Date();
     const istOffset = 5.5 * 60 * 60 * 1000; 

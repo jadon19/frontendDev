@@ -14,3 +14,23 @@
     min-width: 300px;
     flex:2;
 }
+.delete{
+    color:white;
+    background-color: rgb(138, 0, 0);
+    
+}
+.complete{
+    color:white;
+    background-color: rgb(0, 103, 0);
+    
+}
+.add-task{
+    color:white;
+    background-color: rgb(185, 77, 0);
+}
+button{
+    cursor: pointer;
+    border: none;
+    padding:5px 10px 5px 10px;
+    border-radius: 5px;
+}

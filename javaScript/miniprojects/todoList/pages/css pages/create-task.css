@@ -30,6 +30,7 @@
     width:95%;
     background-color: #fafafa;
     transition: border 0.2s ease, background-color 0.2s ease;
+    font-family: Arial;
 }
 .heading:focus{
     border-color: #a8a8a8;
