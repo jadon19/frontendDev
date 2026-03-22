@@ -4,7 +4,9 @@ let parent = document.querySelector(".js-tasks-list");
 let emptyDisplay = document.querySelector(".empty-task");
 let countPending = document.querySelector(".js-count");
 const buttons = document.querySelector(".buttons");
-
+let currentView = "today";
+let currentPage = "tasks"; 
+const heading = document.querySelector(".page-heading");
 
 
 function getTodayDate() {
@@ -35,12 +37,8 @@ function computeStats() {
         if (task.status === "completed") {
             completed++;
         } else if (task.status === "pending") {
-            if (task.dueDate < today) {
-                lapsed++;
-            } else {
                 pending++;
-            }
-        } else if (task.status === "lapsed") {
+        } else {
             lapsed++;
         }
     });
@@ -65,24 +63,37 @@ function updateLapsedTasks() {
 function renderTasks() {
     parent.innerHTML = "";
     const today = getTodayDate();
-    const todayPendingTasks = tasks.filter(task =>
-        task.status === "pending" && task.dueDate === today
-    );
-    if (todayPendingTasks.length === 0) {
-        countPending.textContent = 0;
-        let clone = emptyDisplay.content.cloneNode(true);
-        parent.appendChild(clone);
-        buttons.classList.add("hidden");
-        return;
+    let filteredTasks;
+    heading.textContent = currentView === "today" ? "Today" : "Upcoming";
+    if (currentView === "today") {
+        filteredTasks = tasks.filter(task =>
+            task.status === "pending" && task.dueDate === today
+        );
+    } else if (currentView === "upcoming") {
+        filteredTasks = tasks.filter(task =>
+            task.status === "pending" && task.dueDate > today
+        );
+    }
+    if (filteredTasks.length === 0) {
+    countPending.textContent = 0;
+
+    let clone = emptyDisplay.content.cloneNode(true);
+
+    clone.querySelector("h3").textContent =
+        currentView === "today" ? "No tasks today" : "No upcoming tasks";
+    clone.querySelector(".empty-msg").textContent = currentView==="today"? "Add a new task or view upcoming tasks":"Add a new task";
+    parent.appendChild(clone);
+    buttons.classList.add("hidden");
+    return;
     }
     buttons.classList.remove("hidden");
-    todayPendingTasks.forEach(task => {
+    filteredTasks.forEach(task => {
         let clone = child.content.cloneNode(true);
         clone.querySelector(".render-title").textContent = task.title;
         clone.querySelector(".js-mark-done").dataset.id = task.id;
         parent.appendChild(clone);
     });
-    countPending.textContent = todayPendingTasks.length;
+    countPending.textContent = filteredTasks.length;
     computeStats();
 }
 setInterval(() => {
@@ -90,8 +101,14 @@ setInterval(() => {
     computeStats();
     renderTasks();
 }, 86400000);
+window.showPage = function(page) {
+    document.querySelectorAll(".view").forEach(v => {
+        v.classList.add("hidden");
+    });
 
+    document.querySelector(`.${page}`).classList.remove("hidden");
+    currentPage = page;
+}
 updateLapsedTasks();
 computeStats(); // every 60 sec
 renderTasks();
-

@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>ToDo Application</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="pages/css pages/upcoming.css">
     <link rel="stylesheet" href="pages/css pages/today.css">
     <link rel="stylesheet" href="pages/css pages/create-task.css">
+    <link rel="stylesheet" href="pages/css pages/stickywall.css">
 
 </head>
+
 <body>
     <div class="sidebar">
         <div class="menu">
@@ -22,7 +26,7 @@
                 <img class="sidebar-icon" src="assets/search-icon.png" alt="">
             </div>
             <div>
-                <input  class="search-bar" type="text" placeholder="Search">
+                <input class="search-bar" type="text" placeholder="Search">
             </div>
         </div>
         <div class="title-task">
@@ -30,21 +34,21 @@
                 Tasks
             </div>
             <div class="task-content">
-                
+
                 <div class="sidebar-title">
-                    <button class="sub-title">
+                    <button class="sub-title js-today">
                         <div><img class="sidebar-icon" src="assets/today-icon.png" alt=""></div>
                         <div>Today</div>
                     </button>
-                        
+
                 </div>
                 <div class="sidebar-title">
-                    <button class="sub-title">
-                            <img class="sidebar-icon" src="assets/upcomingtask-icon.png" alt="">
-                            <div>Upcoming</div>
+                    <button class="sub-title js-upcoming">
+                        <img class="sidebar-icon" src="assets/upcomingtask-icon.png" alt="">
+                        <div>Upcoming</div>
                     </button>
                 </div>
-                <div class="sidebar-title" >
+                <div class="sidebar-title">
                     <button class="sub-title js-open-sticky-wall">
                         <img class="sidebar-icon" src="assets/sticky_note-icon.png" alt="">
                         <div>Sticky Wall</div>
@@ -52,8 +56,8 @@
                 </div>
                 <div class="sidebar-title">
                     <button class="sub-title">
-                            <img class="sidebar-icon" src="assets/upcoming-icon.png" alt="">
-                            <div>Progress</div>
+                        <img class="sidebar-icon" src="assets/upcoming-icon.png" alt="">
+                        <div>Progress</div>
                     </button>
                 </div>
             </div>
@@ -64,34 +68,35 @@
                 <div>Settings</div>
             </div>
             <div class="logout">
-                <div><img class="sidebar-icon"src="assets/logout-icon.png" alt=""></div>
+                <div><img class="sidebar-icon" src="assets/logout-icon.png" alt=""></div>
                 <div>Logout</div>
             </div>
         </div>
     </div>
-<!-- this is the default view -->
+    <!-- this is the default view -->
     <div class="website-layout view">
         <div class="todo-list">
             <div class="page-title">
-                <h1 class="page-heading">Today</h1>
-                <p class="js-count page-count" ></p>
+                <h1 class="page-heading"></h1>
+                <p class="js-count page-count"></p>
             </div>
             <div class="add-task">
-                <button class="page-icon-button"><img class="js-open-task page-icon" src="assets/plus-icon.png" alt=""></button>
+                <button class="page-icon-button"><img class="js-open-task page-icon" src="assets/plus-icon.png"
+                        alt=""></button>
                 <input class="search-task" type="text" placeholder="Search Task">
             </div>
             <template class="task-child">
-                <div class="task-item" >
-                    <input type="checkbox" class="css-mark-done js-mark-done" data-id = "TASK_ID">
+                <div class="task-item">
+                    <input type="checkbox" class="css-mark-done js-mark-done" data-id="TASK_ID">
                     <p class="render-title"></p>
-                    <button class="open-task-btn"><img class="open-task"src="assets/upcoming-icon.png" alt=""></button>
+                    <button class="open-task-btn"><img class="open-task" src="assets/upcoming-icon.png" alt=""></button>
                 </div>
             </template>
             <template class="empty-task">
                 <div class="display-empty">
-                    <img src="assets/bell-icon.png"  class="icon-empty-list" alt="">
-                    <h2>No tasks yet</h2>
-                    <p class="empty-msg">All caught up for Today! Add a new task or view upcoming tasks.</p>
+                    <img src="assets/bell-icon.png" class="icon-empty-list" alt="">
+                    <h3></h3>
+                    <p class="empty-msg"></p>
                 </div>
             </template>
             <div class="js-tasks-list css-tasks-list">
@@ -104,7 +109,8 @@
         <template class="open-form">
             <div class="create-header">
                 <p class="create-task">Create Task</p>
-                <button class=" js-close-icon close-icon-button"><img src="assets/close-icon.png" class="close-icon" alt=""></button>
+                <button class=" js-close-icon close-icon-button"><img src="assets/close-icon.png" class="close-icon"
+                        alt=""></button>
             </div>
 
             <input class="js-heading heading" type="text" placeholder="Title">
@@ -112,7 +118,7 @@
             <textarea class="js-description description" placeholder="Write a description..."></textarea>
             <div class="js-date due-date">
                 <label>Due Date</label>
-                <input class="date js-date-input" type="date" >
+                <input class="date js-date-input" type="date">
             </div>
 
             <div class="js-tag tag">
@@ -125,23 +131,63 @@
             </div>
             <button class="save-btn js-save-task">Save Task</button>
         </template>
-        <div class="js-create-task js-view-task">
-        </div>  
-        
+        <div class="js-create-task js-view-task css-open-task">
+        </div>
+
     </div>
 
-<!-- upcoming view  -->
- <div>
-    
- </div>
-<!-- this is sticky wall view -->
- <div>
+    <!-- this is sticky wall view -->
+    <template class="note-template">
+        <div class="note-card">
+            
+            <div class="note-menu hidden">
+                <button class="delete-note-btn">Delete</button>
+            </div>
+            <div class="blah">
+                <h2 class="note-title"></h2>
+                <button class="note-menu-btn">⋮</button>
+            </div>
+            <p class="note-desc"></p>
+        </div>
+    </template>
+    <div class="popup hidden">
+        <div class="modal">
+            <button class="close js-close-note">&times;</button>
 
- </div>
+            <div class="header">
+                <h2 class="popup-title">Create note</h2>
+                <p class="popup-subtitle">Capture your thoughts quickly</p>
+            </div>
+
+            <div class="input-group">
+                <textarea class="note-heading" placeholder=" "></textarea>
+                <label>Title</label>
+            </div>
+
+            <div class="input-group">
+                <textarea class="note-description" placeholder=" "></textarea>
+                <label>Description</label>
+            </div>
+
+            <button class="save-btn js-save-note">Save Note</button>
+        </div>
+    </div>
+
+    <div class="sticky-wall view hidden">
+        <button class="js-open-popup add-note">
+            <div class="plus"></div>
+        </button>
+    </div>
+    <!-- progress view -->
+    <div class="progress view hidden">
+
+    </div>
     <script src="index.js"></script>
+    <script src="pages/js pages/upcoming.js"></script>
     <script src="pages/js pages/Mark-complete-task.js"></script>
     <script src="pages/js pages/delete-task.js"></script>
     <script src="pages/js pages/stickyWall.js"></script>
     <script src="pages/js pages/create-task.js"></script>
 </body>
+
 </html>

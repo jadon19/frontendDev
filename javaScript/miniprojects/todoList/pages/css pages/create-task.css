@@ -1,8 +1,9 @@
-.js-create-task{
+.css-open-task{
     display:flex;
     flex-direction: column;
-    gap:10px;  
+    gap:10px; 
 }
+
 .create-header{
     display: flex;
     justify-content: space-between;
